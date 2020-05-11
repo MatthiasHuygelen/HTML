@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+</body>
+<script>
+    function initMap() {
+        var rd = { lat: 51.0371, lng: 3.7353 };
+        var map = new google.maps.Map(document.getElementById('map'), { zoom: 12, center: rd });
+        var marker = new google.maps.Marker({ position: rd, map: map });
+    }
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+    </script>
+
+</html>
